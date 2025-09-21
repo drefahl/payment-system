@@ -36,6 +36,7 @@ O projeto usa configurações de ambiente dinâmicas baseadas no `NODE_ENV`:
 - **`.env.local`**: Overrides pessoais (não commitado)
 
 ### Precedência de Carregamento
+
 1. `.env.{NODE_ENV}` (específico do ambiente)
 2. `.env.local` (overrides pessoais)
 3. `.env` (fallback, se existir)
@@ -103,11 +104,13 @@ pnpm run test:e2e
 ## 🏗️ Arquitetura
 
 ### Bancos de Dados
+
 - **Desenvolvimento**: PostgreSQL (docker-compose)
 - **Testes**: SQLite (in-memory)
 - **Produção**: PostgreSQL (configurar no .env.production)
 
 ### Autenticação
+
 - JWT tokens com refresh
 - Passport.js para estratégias
 - bcrypt para hash de senhas
