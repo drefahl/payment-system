@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    network_mode: host
+    environment:
+      POSTGRES_DB: payment_system
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres123
+      PGPORT: 5432
+
+  redis:
+    image: redis:7-alpine
+    network_mode: host
+    command: redis-server --port 6379
