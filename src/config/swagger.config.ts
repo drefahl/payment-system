@@ -21,7 +21,7 @@ export function setupSwagger(app: INestApplication): void {
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
 
-  SwaggerModule.setup('api', app, documentFactory, {
+  SwaggerModule.setup('docs', app, documentFactory, {
     swaggerOptions: {
       persistAuthorization: true,
       tagsSorter: 'alpha',
@@ -33,9 +33,8 @@ export function setupSwagger(app: INestApplication): void {
     customSiteTitle: 'Payment System API Documentation',
   });
 
-  SwaggerModule.setup('api-json', app, documentFactory, {
+  SwaggerModule.setup('docs/json', app, documentFactory, {
     jsonDocumentUrl: 'swagger.json',
-    yamlDocumentUrl: 'swagger.yaml',
   });
 }
 
