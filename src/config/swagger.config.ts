@@ -6,8 +6,6 @@ export function setupSwagger(app: INestApplication): void {
     .setTitle('Payment System API')
     .setVersion('1.0.0')
     .addServer('http://localhost:3000', 'Servidor de Desenvolvimento')
-    .addTag('auth', 'Endpoints de autenticação e gerenciamento de sessão')
-    .addTag('users', 'CRUD de usuários e gerenciamento de perfis')
     .addBearerAuth(
       {
         type: 'http',
